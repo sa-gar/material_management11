@@ -7,7 +7,7 @@ import os
 
 # Page configuration
 st.set_page_config(
-    page_title="Zobocon Material Management System",
+    page_title="zoboconMaterial Management System",
     page_icon="🏗️",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -99,9 +99,9 @@ if 'multi_site_data' not in st.session_state:
                     "putty_blade_8inch": {"stock": 48, "used": 0, "unit": "pieces", "min_stock": 10, "category": "tools", "rate": 16.225, "code": "HT-PB-08"},
                     "cutting_plier": {"stock": 1, "used": 0, "unit": "pieces", "min_stock": 2, "category": "tools", "rate": 150.0, "code": "HT-CP-001"}
                 },
-                "accessories": {
-                    "helmet": {"stock": 6, "used": 0, "unit": "pieces", "min_stock": 10, "category": "accessories", "rate": 88.5, "code": "SA-HE-001"},
-                    "safety_jacket_orange": {"stock": 4, "used": 0, "unit": "pieces", "min_stock": 8, "category": "accessories", "rate": 57.75, "code": "SA-SJ-OR"}
+                "machines and accessories": {
+                    "helmet": {"stock": 6, "used": 0, "unit": "pieces", "min_stock": 10, "category": "machines and accessories", "rate": 88.5, "code": "SA-HE-001"},
+                    "safety_jacket_orange": {"stock": 4, "used": 0, "unit": "pieces", "min_stock": 8, "category": "machines and accessories", "rate": 57.75, "code": "SA-SJ-OR"}
                 }
             },
             "Karle Construction Site": {
@@ -117,9 +117,9 @@ if 'multi_site_data' not in st.session_state:
                     "putty_blade_4inch": {"stock": 16, "used": 0, "unit": "pieces", "min_stock": 8, "category": "tools", "rate": 6.2894, "code": "HT-PB-04"},
                     "scaffolding": {"stock": 16, "used": 0, "unit": "sets", "min_stock": 5, "category": "tools", "rate": 5000, "code": "EQ-SC-001"}
                 },
-                "accessories": {
-                    "fall_arrester": {"stock": 6, "used": 0, "unit": "pieces", "min_stock": 4, "category": "accessories", "rate": 1475, "code": "SA-FA-001"},
-                    "safety_goggles": {"stock": 17, "used": 0, "unit": "pieces", "min_stock": 10, "category": "accessories", "rate": 37.76, "code": "SA-GO-001"}
+                "machines and accessories": {
+                    "fall_arrester": {"stock": 6, "used": 0, "unit": "pieces", "min_stock": 4, "category": "machines and accessories", "rate": 1475, "code": "SA-FA-001"},
+                    "safety_goggles": {"stock": 17, "used": 0, "unit": "pieces", "min_stock": 10, "category": "machines and accessories", "rate": 37.76, "code": "SA-GO-001"}
                 }
             }
         },
@@ -217,19 +217,19 @@ def show_dashboard():
     col1, col2, col3, col4 = st.columns(4)
 
     total_sites = len(sites)
-    total_items = sum(len(site['materials']) + len(site['tools']) + len(site['accessories']) 
+    total_items = sum(len(site['materials']) + len(site['tools']) + len(site['machines and accessories']) 
                      for site in sites.values())
 
     total_stock_value = sum(
         item['stock'] * item.get('rate', 0)
         for site in sites.values()
-        for category in ['materials', 'tools', 'accessories']
+        for category in ['materials', 'tools', 'machines and accessories']
         for item in site[category].values()
     )
 
     total_low_stock = sum(
         1 for site in sites.values()
-        for category in ['materials', 'tools', 'accessories']
+        for category in ['materials', 'tools', 'machines and accessories']
         for item in site[category].values()
         if item['stock'] <= item['min_stock']
     )
@@ -250,10 +250,10 @@ def show_dashboard():
 
     site_data = []
     for site_name, site_info in sites.items():
-        site_items = len(site_info['materials']) + len(site_info['tools']) + len(site_info['accessories'])
+        site_items = len(site_info['materials']) + len(site_info['tools']) + len(site_info['machines and accessories'])
         site_value = sum(
             item['stock'] * item.get('rate', 0)
-            for category in ['materials', 'tools', 'accessories']
+            for category in ['materials', 'tools', 'machines and accessories']
             for item in site_info[category].values()
         )
 
@@ -329,7 +329,7 @@ def show_site_management():
                     "project_type": project_type,
                     "materials": {},
                     "tools": {},
-                    "accessories": {}
+                    "machines and accessories": {}
                 }
 
                 # Update system info
@@ -396,12 +396,12 @@ def show_inventory(selected_site):
     with col2:
         st.metric("Tools", len(site_data['tools']))
     with col3:
-        st.metric("Accessories", len(site_data['accessories']))
+        st.metric("machines and accessories", len(site_data['machines and accessories']))
 
     st.divider()
 
     # Display inventory by category
-    for category in ['materials', 'tools', 'accessories']:
+    for category in ['materials', 'tools', 'machines and accessories']:
         if site_data[category]:
             st.subheader(f"📦 {category.title()}")
 
@@ -439,7 +439,7 @@ def show_add_items(selected_site):
 
     with col1:
         st.subheader("📦 Item Details")
-        category = st.selectbox("Category *", ["materials", "tools", "accessories"], format_func=lambda x: x.title())
+        category = st.selectbox("Category *", ["materials", "tools", "machines and accessories"], format_func=lambda x: x.title())
 
         site_data = st.session_state.multi_site_data['sites'][selected_site]
         existing_items = list(site_data[category].keys()) if category in site_data else []
@@ -537,7 +537,7 @@ def show_use_items(selected_site):
 
     with col1:
         st.subheader("📦 Item Selection")
-        category = st.selectbox("Category *", ["materials", "tools", "accessories"], format_func=lambda x: x.title())
+        category = st.selectbox("Category *", ["materials", "tools", "machines and accessories"], format_func=lambda x: x.title())
 
         # Get items with stock > 0
         available_items = {name: data for name, data in site_data[category].items() if data['stock'] > 0}
@@ -620,7 +620,7 @@ def show_transfers():
 
         if from_site:
             from_site_data = st.session_state.multi_site_data['sites'][from_site]
-            category = st.selectbox("Category *", ["materials", "tools", "accessories"], format_func=lambda x: x.title())
+            category = st.selectbox("Category *", ["materials", "tools", "machines and accessories"], format_func=lambda x: x.title())
 
             available_items = {name: data for name, data in from_site_data[category].items() if data['stock'] > 0}
 
@@ -709,8 +709,8 @@ def show_reports(selected_site):
         # Site summary
         col1, col2, col3 = st.columns(3)
 
-        total_items = len(site_data['materials']) + len(site_data['tools']) + len(site_data['accessories'])
-        total_value = sum(item['stock'] * item.get('rate', 0) for category in ['materials', 'tools', 'accessories'] for item in site_data[category].values())
+        total_items = len(site_data['materials']) + len(site_data['tools']) + len(site_data['machines and accessories'])
+        total_value = sum(item['stock'] * item.get('rate', 0) for category in ['materials', 'tools', 'machines and accessories'] for item in site_data[category].values())
 
         with col1:
             st.metric("Total Items", total_items)

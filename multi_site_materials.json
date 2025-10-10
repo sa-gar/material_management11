@@ -45,13 +45,13 @@
           "code": "HT-CP-001"
         }
       },
-      "accessories": {
+      "machines and machines and accessories": {
         "helmet": {
           "stock": 6,
           "used": 0,
           "unit": "pieces",
           "min_stock": 10,
-          "category": "accessories",
+          "category": "machines and accessories",
           "rate": 88.5,
           "code": "SA-HE-001"
         },
@@ -60,7 +60,7 @@
           "used": 0,
           "unit": "pieces",
           "min_stock": 8,
-          "category": "accessories",
+          "category": "machines and accessories",
           "rate": 57.75,
           "code": "SA-SJ-OR"
         }
@@ -111,13 +111,13 @@
           "code": "EQ-SC-001"
         }
       },
-      "accessories": {
+      "machines and accessories": {
         "fall_arrester": {
           "stock": 6,
           "used": 0,
           "unit": "pieces",
           "min_stock": 4,
-          "category": "accessories",
+          "category": "machines and accessories",
           "rate": 1475,
           "code": "SA-FA-001"
         },
@@ -126,7 +126,7 @@
           "used": 0,
           "unit": "pieces",
           "min_stock": 10,
-          "category": "accessories",
+          "category": "machines and accessories",
           "rate": 37.76,
           "code": "SA-GO-001"
         }
@@ -139,7 +139,7 @@
       "project_type": "Commercial Construction",
       "materials": {},
       "tools": {},
-      "accessories": {}
+      "machines and accessories": {}
     }
   },
   "transactions": [],
