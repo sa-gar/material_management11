@@ -478,11 +478,11 @@ def show_add_items(selected_site):
         else:
             item_name = st.text_input("Item Name *").lower().replace(' ', '_')
             unit = st.text_input("Unit *", placeholder="pieces, kg, liters, etc.")
-            min_stock = st.number_input("Minimum Stock Level *", min_value=1, value=5)
+            min_stock = st.number_input("Minimum Stock Level *", min_value=0, value=5)
             rate = st.number_input("Rate per Unit (₹)", min_value=0.0, value=0.0, step=0.01)
             item_code = st.text_input("Item Code", placeholder="e.g., SA-HE-001")
 
-        quantity = st.number_input("Quantity to Add *", min_value=1, value=1)
+        quantity = st.number_input("Quantity to Add ", min_value=0, value=0)
 
     with col2:
         st.subheader("📋 Additional Details")
@@ -495,7 +495,7 @@ def show_add_items(selected_site):
     if st.button("➕ Add to Inventory", type="primary"):
         try:
             if item_option == "New Item":
-                if item_name and unit and quantity > 0 and received_by:
+                if item_name and unit and quantity >=0 and received_by:
                     # Add new item
                     site_data[category][item_name] = {
                         'stock': quantity,
@@ -512,7 +512,7 @@ def show_add_items(selected_site):
                     return
             else:
                 # Add to existing item
-                if item_name and quantity > 0 and received_by:
+                if item_name and quantity >= 0 and received_by:
                     site_data[category][item_name]['stock'] += quantity
                     success_msg = f"✅ Added {quantity} {site_data[category][item_name]['unit']} to '{item_name.replace('_', ' ').title()}'"
                 else:
@@ -644,7 +644,7 @@ def show_transfers():
 
         if from_site:
             from_site_data = st.session_state.multi_site_data['sites'][from_site]
-            category = st.selectbox("Category *", ["materials", "tools", "machines and machines and accessories"], format_func=lambda x: x.title())
+            category = st.selectbox("Category *", ["materials", "tools", "machines and accessories"], format_func=lambda x: x.title())
 
             available_items = {name: data for name, data in from_site_data[category].items() if data['stock'] > 0}
 

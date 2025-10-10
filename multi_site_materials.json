@@ -10,7 +10,7 @@
           "stock": 40,
           "used": 0,
           "unit": "kg",
-          "min_stock": 20,
+          "min_stock": 0,
           "category": "materials",
           "rate": 607.7,
           "code": "AP-PY-03"
@@ -19,7 +19,7 @@
           "stock": 120,
           "used": 0,
           "unit": "liters",
-          "min_stock": 50,
+          "min_stock": 0,
           "category": "materials",
           "rate": 1416,
           "code": "AP-PR-01"
@@ -30,7 +30,7 @@
           "stock": 48,
           "used": 0,
           "unit": "pieces",
-          "min_stock": 10,
+          "min_stock": 0,
           "category": "tools",
           "rate": 16.225,
           "code": "HT-PB-08"
@@ -39,7 +39,7 @@
           "stock": 1,
           "used": 0,
           "unit": "pieces",
-          "min_stock": 2,
+          "min_stock": 0,
           "category": "tools",
           "rate": 150.0,
           "code": "HT-CP-001"
@@ -50,7 +50,7 @@
           "stock": 6,
           "used": 0,
           "unit": "pieces",
-          "min_stock": 10,
+          "min_stock": 0,
           "category": "machines and accessories",
           "rate": 88.5,
           "code": "SA-HE-001"
@@ -59,7 +59,7 @@
           "stock": 4,
           "used": 0,
           "unit": "pieces",
-          "min_stock": 8,
+          "min_stock": 0,
           "category": "machines and accessories",
           "rate": 57.75,
           "code": "SA-SJ-OR"
@@ -76,7 +76,7 @@
           "stock": 3600,
           "used": 0,
           "unit": "kg",
-          "min_stock": 100,
+          "min_stock": 0,
           "category": "materials",
           "rate": 600.03,
           "code": "JK-PY-01"
@@ -85,10 +85,19 @@
           "stock": 297,
           "used": 23,
           "unit": "liters",
-          "min_stock": 50,
+          "min_stock": 0,
           "category": "materials",
           "rate": 1357,
           "code": "DL-PR-02"
+        },
+        "primer": {
+          "stock": 50,
+          "used": 0,
+          "unit": "kgs",
+          "min_stock": 0,
+          "category": "materials",
+          "rate": 0.0,
+          "code": "N/A"
         }
       },
       "tools": {
@@ -105,7 +114,7 @@
           "stock": 16,
           "used": 0,
           "unit": "sets",
-          "min_stock": 5,
+          "min_stock": 0,
           "category": "tools",
           "rate": 5000,
           "code": "EQ-SC-001"
@@ -116,7 +125,7 @@
           "stock": 6,
           "used": 0,
           "unit": "pieces",
-          "min_stock": 4,
+          "min_stock": 0,
           "category": "machines and accessories",
           "rate": 1475,
           "code": "SA-FA-001"
@@ -125,10 +134,19 @@
           "stock": 17,
           "used": 0,
           "unit": "pieces",
-          "min_stock": 10,
+          "min_stock": 0,
           "category": "machines and accessories",
           "rate": 37.76,
           "code": "SA-GO-001"
+        },
+        "angle_grinding_machine_4_inch": {
+          "stock": 1,
+          "used": 0,
+          "unit": "pieces",
+          "min_stock": 0,
+          "category": "machines and accessories",
+          "rate": 0.0,
+          "code": "N/A"
         }
       }
     },
@@ -137,12 +155,363 @@
       "site_manager": "LALITH ",
       "contact": "8867767953",
       "project_type": "Other",
-      "materials": {},
+      "materials": {
+        "birla_putty": {
+          "stock": 8,
+          "used": 2,
+          "unit": "kgs",
+          "min_stock": 1,
+          "category": "materials",
+          "rate": 100.0,
+          "code": "N/A"
+        },
+        "acrylic_putty": {
+          "stock": 8200,
+          "used": 500,
+          "unit": "khs",
+          "min_stock": 0,
+          "category": "materials",
+          "rate": 0.0,
+          "code": "N/A"
+        },
+        "primer": {
+          "stock": 650,
+          "used": 500,
+          "unit": "kgs",
+          "min_stock": 0,
+          "category": "materials",
+          "rate": 0.0,
+          "code": "N/A"
+        }
+      },
       "tools": {},
-      "machines and accessories": {}
+      "machines and accessories": {
+        "cutting_machines": {
+          "stock": 0,
+          "used": 0,
+          "unit": "pieces",
+          "min_stock": 1,
+          "category": "machines and accessories",
+          "rate": 0.0,
+          "code": "N/A"
+        },
+        "angle_grinding_machine_4_inch": {
+          "stock": 0,
+          "used": 0,
+          "unit": "pieces",
+          "min_stock": 0,
+          "category": "machines and accessories",
+          "rate": 0.0,
+          "code": "N/A"
+        },
+        "angle_grinding_machine_7_inch": {
+          "stock": 0,
+          "used": 0,
+          "unit": "pieces",
+          "min_stock": 0,
+          "category": "machines and accessories",
+          "rate": 0.0,
+          "code": "N/A"
+        },
+        "jet_wash_machine_gun": {
+          "stock": 6,
+          "used": 0,
+          "unit": "pieces",
+          "min_stock": 0,
+          "category": "machines and accessories",
+          "rate": 0.0,
+          "code": "N/A"
+        },
+        "jet_wash_machine_(bitali)_": {
+          "stock": 1,
+          "used": 0,
+          "unit": "pieces",
+          "min_stock": 0,
+          "category": "machines and accessories",
+          "rate": 0.0,
+          "code": "N/A"
+        },
+        "vacuum_cleaner_": {
+          "stock": 1,
+          "used": 0,
+          "unit": "pieces",
+          "min_stock": 0,
+          "category": "machines and accessories",
+          "rate": 0.0,
+          "code": "N/A"
+        },
+        "putty/_paint_spry_machine": {
+          "stock": 1,
+          "used": 0,
+          "unit": "pieces",
+          "min_stock": 0,
+          "category": "machines and accessories",
+          "rate": 0.0,
+          "code": "N/A"
+        }
+      }
     }
   },
-  "transactions": [],
+  "transactions": [
+    {
+      "date": "2025-10-10 19:24:11.065939",
+      "type": "added",
+      "site": "DSR WHITE WATERS",
+      "category": "machines and accessories",
+      "item": "cutting_machines",
+      "quantity": 0,
+      "supplier": "",
+      "received_by": "Site Manager"
+    },
+    {
+      "date": "2025-10-10 19:26:35.167969",
+      "type": "added",
+      "site": "DSR WHITE WATERS",
+      "category": "machines and accessories",
+      "item": "angle_grinding_machine_4_inch",
+      "quantity": 0,
+      "supplier": "",
+      "received_by": "Site Manager"
+    },
+    {
+      "date": "2025-10-10 19:29:44.028591",
+      "type": "added",
+      "site": "DSR WHITE WATERS",
+      "category": "machines and accessories",
+      "item": "angle_grinding_machine_4_inch",
+      "quantity": 10,
+      "supplier": "",
+      "received_by": "Site Manager"
+    },
+    {
+      "date": "2025-10-10 19:30:31.071534",
+      "type": "used",
+      "site": "DSR WHITE WATERS",
+      "category": "machines and accessories",
+      "item": "angle_grinding_machine_4_inch",
+      "quantity": 10,
+      "work_area": "floor",
+      "supervisor": "lalith",
+      "purpose": "Repair"
+    },
+    {
+      "date": "2025-10-10 19:30:58.335948",
+      "type": "added",
+      "site": "DSR WHITE WATERS",
+      "category": "machines and accessories",
+      "item": "angle_grinding_machine_4_inch",
+      "quantity": 1,
+      "supplier": "",
+      "received_by": "Site Manager"
+    },
+    {
+      "date": "2025-10-10 19:31:53.398044",
+      "type": "added",
+      "site": "DSR WHITE WATERS",
+      "category": "machines and accessories",
+      "item": "angle_grinding_machine_7_inch",
+      "quantity": 0,
+      "supplier": "",
+      "received_by": "Site Manager"
+    },
+    {
+      "date": "2025-10-10 19:32:46.718045",
+      "type": "added",
+      "site": "DSR WHITE WATERS",
+      "category": "machines and accessories",
+      "item": "jet_wash_machine_gun",
+      "quantity": 1,
+      "supplier": "",
+      "received_by": "Site Manager"
+    },
+    {
+      "date": "2025-10-10 19:34:04.648545",
+      "type": "added",
+      "site": "DSR WHITE WATERS",
+      "category": "machines and accessories",
+      "item": "jet_wash_machine_gun",
+      "quantity": 1,
+      "supplier": "",
+      "received_by": "Site Manager"
+    },
+    {
+      "date": "2025-10-10 19:35:10.393413",
+      "type": "added",
+      "site": "DSR WHITE WATERS",
+      "category": "machines and accessories",
+      "item": "jet_wash_machine_(bitali)_",
+      "quantity": 0,
+      "supplier": "",
+      "received_by": "nagesh"
+    },
+    {
+      "date": "2025-10-10 19:35:54.496929",
+      "type": "added",
+      "site": "DSR WHITE WATERS",
+      "category": "machines and accessories",
+      "item": "vacuum_cleaner_",
+      "quantity": 0,
+      "supplier": "",
+      "received_by": "nagesh"
+    },
+    {
+      "date": "2025-10-10 19:36:05.385365",
+      "type": "added",
+      "site": "DSR WHITE WATERS",
+      "category": "machines and accessories",
+      "item": "vacuum_cleaner_",
+      "quantity": 1,
+      "supplier": "",
+      "received_by": "nagesh"
+    },
+    {
+      "date": "2025-10-10 19:36:22.678412",
+      "type": "added",
+      "site": "DSR WHITE WATERS",
+      "category": "machines and accessories",
+      "item": "putty/_paint_spry_machine",
+      "quantity": 1,
+      "supplier": "",
+      "received_by": "nagesh"
+    },
+    {
+      "date": "2025-10-10 19:37:22.107300",
+      "type": "added",
+      "site": "DSR WHITE WATERS",
+      "category": "machines and accessories",
+      "item": "jet_wash_machine_(bitali)_",
+      "quantity": 1,
+      "supplier": "",
+      "received_by": "Site Manager"
+    },
+    {
+      "date": "2025-10-10 19:42:53.594876",
+      "type": "added",
+      "site": "DSR WHITE WATERS",
+      "category": "machines and accessories",
+      "item": "jet_wash_machine_gun",
+      "quantity": 5,
+      "supplier": "",
+      "received_by": "Site Manager"
+    },
+    {
+      "date": "2025-10-10 19:46:08.029336",
+      "type": "transfer",
+      "from_site": "DSR WHITE WATERS",
+      "to_site": "Karle Construction Site",
+      "category": "machines and accessories",
+      "item": "angle_grinding_machine_4_inch",
+      "quantity": 1,
+      "authorized_by": "Site Manager",
+      "driver_name": "shiv",
+      "vehicle_number": ""
+    },
+    {
+      "date": "2025-10-10 19:50:11.201618",
+      "type": "added",
+      "site": "DSR WHITE WATERS",
+      "category": "materials",
+      "item": "birla_putty",
+      "quantity": 10,
+      "supplier": "",
+      "received_by": "Site Manager"
+    },
+    {
+      "date": "2025-10-10 19:50:31.500190",
+      "type": "used",
+      "site": "DSR WHITE WATERS",
+      "category": "materials",
+      "item": "birla_putty",
+      "quantity": 2,
+      "work_area": "floor",
+      "supervisor": "Site Supervisor",
+      "purpose": "Construction"
+    },
+    {
+      "date": "2025-10-10 19:54:28.992821",
+      "type": "added",
+      "site": "DSR WHITE WATERS",
+      "category": "materials",
+      "item": "acrylic_putty",
+      "quantity": 1000,
+      "supplier": "",
+      "received_by": "Site Manager"
+    },
+    {
+      "date": "2025-10-10 19:55:30.549082",
+      "type": "used",
+      "site": "DSR WHITE WATERS",
+      "category": "materials",
+      "item": "acrylic_putty",
+      "quantity": 500,
+      "work_area": "flat",
+      "supervisor": "Site Supervisor",
+      "purpose": "Construction"
+    },
+    {
+      "date": "2025-10-10 19:56:01.445410",
+      "type": "added",
+      "site": "DSR WHITE WATERS",
+      "category": "materials",
+      "item": "acrylic_putty",
+      "quantity": 7000,
+      "supplier": "",
+      "received_by": "Site Manager"
+    },
+    {
+      "date": "2025-10-10 19:56:10.795435",
+      "type": "added",
+      "site": "DSR WHITE WATERS",
+      "category": "materials",
+      "item": "acrylic_putty",
+      "quantity": 700,
+      "supplier": "",
+      "received_by": "Site Manager"
+    },
+    {
+      "date": "2025-10-10 20:00:06.276184",
+      "type": "added",
+      "site": "DSR WHITE WATERS",
+      "category": "materials",
+      "item": "primer",
+      "quantity": 1000,
+      "supplier": "",
+      "received_by": "Site Manager"
+    },
+    {
+      "date": "2025-10-10 20:00:29.646759",
+      "type": "used",
+      "site": "DSR WHITE WATERS",
+      "category": "materials",
+      "item": "primer",
+      "quantity": 500,
+      "work_area": "floor",
+      "supervisor": "Site Supervisor",
+      "purpose": "Construction"
+    },
+    {
+      "date": "2025-10-10 20:01:10.677514",
+      "type": "added",
+      "site": "DSR WHITE WATERS",
+      "category": "materials",
+      "item": "primer",
+      "quantity": 200,
+      "supplier": "",
+      "received_by": "Site Manager"
+    },
+    {
+      "date": "2025-10-10 20:02:38.469677",
+      "type": "transfer",
+      "from_site": "DSR WHITE WATERS",
+      "to_site": "Karle Construction Site",
+      "category": "materials",
+      "item": "primer",
+      "quantity": 50,
+      "authorized_by": "Site Manager",
+      "driver_name": "shiv",
+      "vehicle_number": ""
+    }
+  ],
   "system_info": {
     "version": "Multi-Site v4.1",
     "last_updated": "2025-10-10 17:28:05.499317",
