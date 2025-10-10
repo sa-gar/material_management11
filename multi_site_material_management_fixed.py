@@ -6,8 +6,26 @@ import plotly.express as px
 import os
 
 # Page configuration
+
+import json
+
+if "multi_site_data" not in st.session_state:
+    if os.path.exists("multi_site_materials.json"):
+        with open("multi_site_materials.json", "r", encoding="utf-8") as f:
+            st.session_state.multi_site_data = json.load(f)
+    else:
+        st.session_state.multi_site_data = {
+            # Initial sample data
+        }
+
+
+
+def save_data():
+    with open("multi_site_data.json", "w") as f:
+        json.dump(st.session_state.multi_site_data, f, indent=2, default=str)
+
 st.set_page_config(
-    page_title="zoboconMaterial Management System",
+    page_title="Zobocon Material Management System",
     page_icon="🏗️",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -86,7 +104,7 @@ st.markdown("""
 if 'multi_site_data' not in st.session_state:
     st.session_state.multi_site_data = {
         "sites": {
-            "L&T Painting Site": {
+            "L&T Site": {
                 "location": "L&T Construction Site Location",
                 "site_manager": "L&T Site Manager",
                 "contact": "+91-XXXXXXXXXX",
@@ -140,14 +158,24 @@ def save_data():
     except Exception as e:
         st.error(f"Error saving data: {e}")
         return False
+        import os
+
+if "multi_site_data" not in st.session_state:
+    if os.path.exists("multi_site_data.json"):
+        with open("multi_site_data.json") as f:
+            st.session_state.multi_site_data = json.load(f)
+    else:
+        st.session_state.multi_site_data = {
+            # Place your initial/sample data structure here
+        }
+
 
 def main():
     # Main header
     st.markdown("""
     <div class="main-header">
-        <h1>🏗️ ZOBOCON MATERIAL MANAGEMENT SYSTEM</h1>
+        <h1>🏗️ZOBOCON MATERIAL MANAGEMENT SYSTEM 2025</h1>
         <h2>WELCOME TO ZOBOCON</h2>
-        <p>📊 Complete Site Management Solution</p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -305,12 +333,8 @@ def show_site_management():
         site_manager = st.text_input("👨‍💼 Site Manager *", key="new_manager", placeholder="e.g., John Doe")
         contact = st.text_input("📞 Contact Number *", key="new_contact", placeholder="e.g., +91-9876543210")
         project_type = st.selectbox("🏗️ Project Type *", [
-            "Commercial Construction",
-            "Residential Construction", 
-            "Infrastructure Project",
-            "Industrial Project",
-            "Renovation Project",
-            "Other"
+            "painting work"
+            
         ], key="new_project_type")
 
         # Add site button
@@ -620,7 +644,7 @@ def show_transfers():
 
         if from_site:
             from_site_data = st.session_state.multi_site_data['sites'][from_site]
-            category = st.selectbox("Category *", ["materials", "tools", "machines and accessories"], format_func=lambda x: x.title())
+            category = st.selectbox("Category *", ["materials", "tools", "machines and machines and accessories"], format_func=lambda x: x.title())
 
             available_items = {name: data for name, data in from_site_data[category].items() if data['stock'] > 0}
 
