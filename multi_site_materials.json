@@ -45,7 +45,7 @@
           "code": "HT-CP-001"
         }
       },
-      "machines and machines and accessories": {
+      "machines and accessories": {
         "helmet": {
           "stock": 6,
           "used": 0,
@@ -132,11 +132,11 @@
         }
       }
     },
-    "premia ": {
-      "location": "fsaf",
-      "site_manager": "fkdfjksd",
-      "contact": "453049",
-      "project_type": "Commercial Construction",
+    "DSR WHITE WATERS": {
+      "location": "DSR White Waters Road, Carmelaram Rd, Gunjur Palya, Bengaluru, Karnataka 560035",
+      "site_manager": "LALITH ",
+      "contact": "8867767953",
+      "project_type": "Other",
       "materials": {},
       "tools": {},
       "machines and accessories": {}
@@ -145,7 +145,7 @@
   "transactions": [],
   "system_info": {
     "version": "Multi-Site v4.1",
-    "last_updated": "2025-10-09 20:10:35.459569",
+    "last_updated": "2025-10-10 17:28:05.499317",
     "total_sites": 3
   }
 }
